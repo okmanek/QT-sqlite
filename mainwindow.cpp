@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     if(query.isActive())
     {
         ui->statusBar->showMessage("Database connection ok");
+        query.first();
+        FillForm();
     }
     else
     {
@@ -31,4 +33,12 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::FillForm()
+{
+    ui->Name->setText(query.value(0).toString());
+    ui->Email->setText(query.value(1).toString());
+    ui->dateEdit->setDate(query.value(2).toDate());
+            //setText(query.value(2).toDate());
 }

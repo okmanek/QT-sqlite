@@ -20,6 +20,8 @@ private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     QSqlQuery query;
+
+    void FillForm();
 };
 
 #endif // MAINWINDOW_H
