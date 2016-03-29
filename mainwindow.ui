@@ -59,7 +59,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QDateEdit" name="dateEdit">
+             <widget class="QDateEdit" name="BirthDate">
               <property name="calendarPopup">
                <bool>true</bool>
               </property>
@@ -140,5 +140,102 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Name</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Save</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>283</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Email</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>Save</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>382</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BirthDate</sender>
+   <signal>editingFinished()</signal>
+   <receiver>Save</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Next</sender>
+   <signal>clicked()</signal>
+   <receiver>Save</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>322</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Previous</sender>
+   <signal>clicked()</signal>
+   <receiver>Save</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>New</sender>
+   <signal>clicked()</signal>
+   <receiver>Name</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

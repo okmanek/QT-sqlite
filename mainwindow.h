@@ -16,12 +16,25 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_Previous_clicked();
+
+    void on_Next_clicked();
+
+    void on_Save_clicked();
+
+    void on_New_clicked();
+
+    void on_Cancel_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     QSqlQuery query;
 
     void FillForm();
+
+    bool newrecord;
 };
 
 #endif // MAINWINDOW_H
